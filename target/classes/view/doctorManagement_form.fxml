@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #F0E4E4;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.petcarecenter.controller.DoctorManagementFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d9d3d3" height="255.0" layoutX="549.0" opacity="0.2" stroke="BLACK" strokeType="INSIDE" width="371.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d9d3d3" height="255.0" layoutX="269.0" layoutY="184.0" opacity="0.2" stroke="BLACK" strokeType="INSIDE" width="371.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d9d3d3" height="255.0" layoutY="365.0" opacity="0.2" stroke="BLACK" strokeType="INSIDE" width="371.0" />
+      <Label layoutX="147.0" layoutY="65.0" prefHeight="33.0" prefWidth="61.0" text="Pet">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="147.0" layoutY="101.0" text="Care Center">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnBack" layoutX="793.0" layoutY="558.0" mnemonicParsing="false" onAction="#btnBackOnAction" prefHeight="38.0" prefWidth="115.0" style="-fx-background-color: #303132; -fx-background-radius: 50;" text="Back" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="102.0" fitWidth="121.0" layoutX="19.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../Users/MSI/Pictures/Screenshots/Screenshot%20(12)_LI.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="68.0" fitWidth="76.0" layoutX="817.0" layoutY="494.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../Users/MSI/Downloads/pet-icon-8.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtDoctorId" layoutX="183.0" layoutY="196.0" onAction="#txtDoctorIdOnAction" prefHeight="26.0" prefWidth="450.0" />
+      <Label layoutX="75.0" layoutY="197.0" prefHeight="22.0" prefWidth="82.0" text="Doctor ID">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtDoctorName" layoutX="183.0" layoutY="240.0" onAction="#txtDoctorNameOnAction" prefHeight="26.0" prefWidth="450.0" />
+      <Label layoutX="75.0" layoutY="242.0" prefHeight="22.0" prefWidth="105.0" text="Doctor Name">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtContact" layoutX="182.0" layoutY="285.0" onAction="#txtContactOnAction" prefHeight="26.0" prefWidth="450.0" />
+      <Label layoutX="75.0" layoutY="286.0" prefHeight="22.0" prefWidth="82.0" text="Contact">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblDoctor" layoutX="60.0" layoutY="358.0" prefHeight="239.0" prefWidth="662.0">
+        <columns>
+          <TableColumn fx:id="colDoctorId" prefWidth="148.79998779296875" text="Doctor ID" />
+          <TableColumn fx:id="colName" prefWidth="322.4000244140625" text="Name" />
+            <TableColumn fx:id="colContact" prefWidth="192.79998779296875" text="Contact" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnSave" layoutX="662.0" layoutY="188.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="37.0" prefWidth="82.0" style="-fx-background-color: #303132;" text="Save" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnUpdate" layoutX="662.0" layoutY="236.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="37.0" prefWidth="82.0" style="-fx-background-color: #303132;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnDelect" layoutX="663.0" layoutY="284.0" mnemonicParsing="false" onAction="#btnDelectOnAction" prefHeight="38.0" prefWidth="82.0" style="-fx-background-color: #303132;" text="Delect" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #F0E4E4;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.petcarecenter.controller.AppointmentFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d9d3d3" height="255.0" layoutX="527.0" opacity="0.2" stroke="BLACK" strokeType="INSIDE" width="371.0" />
+      <Label layoutX="132.0" layoutY="60.0" prefHeight="33.0" prefWidth="61.0" text="Pet">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="132.0" layoutY="95.0" text="Care Center">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="102.0" fitWidth="121.0" layoutX="7.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../Users/MSI/Pictures/Screenshots/Screenshot%20(12)_LI.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d9d3d3" height="255.0" layoutY="355.0" opacity="0.2" stroke="BLACK" strokeType="INSIDE" width="371.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d9d3d3" height="255.0" layoutX="257.0" layoutY="178.0" opacity="0.2" stroke="BLACK" strokeType="INSIDE" width="371.0" />
+      <Button fx:id="btnBack" layoutX="783.0" layoutY="555.0" mnemonicParsing="false" onAction="#btnBackOnAction" prefHeight="38.0" prefWidth="115.0" style="-fx-background-color: #303132; -fx-background-radius: 50;" text="Back" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="68.0" fitWidth="76.0" layoutX="807.0" layoutY="491.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../Users/MSI/Downloads/pet-icon-8.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="10.0" layoutY="206.0" prefHeight="22.0" prefWidth="62.0" text="Pet ID ">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="10.0" layoutY="161.0" prefHeight="22.0" prefWidth="106.0" text="Appointment ID">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtAppoinmentId" layoutX="121.0" layoutY="159.0" onAction="#txtAppoinmentIdOnAction" prefHeight="26.0" prefWidth="450.0" />
+      <TextField fx:id="txtSchduleId" layoutX="118.0" layoutY="248.0" onAction="#txtSchduleIdOnAction" prefHeight="26.0" prefWidth="450.0" />
+      <TextField fx:id="txtServiceId" layoutX="117.0" layoutY="290.0" onAction="#txtServiceIdOnAction" prefHeight="26.0" prefWidth="450.0" />
+      <TextField fx:id="txtPetId" layoutX="118.0" layoutY="204.0" onAction="#txtPetIdOnAction" prefHeight="26.0" prefWidth="450.0" />
+      <Label layoutX="10.0" layoutY="250.0" prefHeight="22.0" prefWidth="62.0" text="Schdule ID">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="10.0" layoutY="292.0" prefHeight="22.0" prefWidth="62.0" text="Service ID">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblAppointment" layoutX="63.0" layoutY="396.0" opacity="0.87" prefHeight="186.0" prefWidth="714.0">
+        <columns>
+          <TableColumn fx:id="colAppointmentId" prefWidth="141.60005950927734" text="Appointment ID" />
+          <TableColumn fx:id="colPetId" prefWidth="155.20001220703125" text="Pet ID" />
+            <TableColumn fx:id="colSchduleId" minWidth="4.000030517578125" prefWidth="96.79998779296875" text="Schdule ID" />
+            <TableColumn fx:id="colServiceId" prefWidth="165.60012817382812" text="Service ID" />
+            <TableColumn fx:id="colDate" prefWidth="163.19997558593752" text="Date" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnSave" layoutX="596.0" layoutY="210.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="38.0" prefWidth="82.0" style="-fx-background-color: #303132;" text="Save" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnDelect" layoutX="596.0" layoutY="316.0" mnemonicParsing="false" onAction="#btnDelectOnAction" prefHeight="38.0" prefWidth="82.0" style="-fx-background-color: #303132;" text="Delect" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <TextField fx:id="txtDate" layoutX="117.0" layoutY="331.0" prefHeight="26.0" prefWidth="450.0" />
+      <Label layoutX="14.0" layoutY="332.0" prefHeight="22.0" prefWidth="62.0" text="Date">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="606.0" layoutY="37.0" prefHeight="22.0" prefWidth="62.0" text="Date    :">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDate" layoutX="678.0" layoutY="37.0" prefHeight="22.0" prefWidth="166.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnUpdate" layoutX="596.0" layoutY="264.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="38.0" prefWidth="82.0" style="-fx-background-color: #303132;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

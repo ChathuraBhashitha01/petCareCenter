@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #F0E4E4;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.petcarecenter.controller.PaymentFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d9d3d3" height="255.0" layoutX="559.0" opacity="0.2" stroke="BLACK" strokeType="INSIDE" width="371.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d9d3d3" height="255.0" layoutX="268.0" layoutY="194.0" opacity="0.2" stroke="BLACK" strokeType="INSIDE" width="371.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d9d3d3" height="255.0" layoutY="375.0" opacity="0.2" stroke="BLACK" strokeType="INSIDE" width="371.0" />
+      <Button fx:id="btnBack" layoutX="795.0" layoutY="578.0" mnemonicParsing="false" onAction="#btnBackOnAction" prefHeight="43.0" prefWidth="126.0" style="-fx-background-color: #303132;" text="Back" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+      <Label layoutX="47.0" layoutY="135.0" prefHeight="22.0" prefWidth="62.0" text="Service ID">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="45.0" layoutY="273.0" prefHeight="22.0" prefWidth="95.0" text="Medicine ID">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="767.0" layoutY="273.0" prefHeight="22.0" prefWidth="62.0" text="Quantity">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtMedicineQuantity" layoutX="832.0" layoutY="271.0" onAction="#txtMedicineCostOnAction" prefHeight="26.0" prefWidth="62.0" />
+      <Label layoutX="44.0" layoutY="426.0" prefHeight="22.0" prefWidth="95.0" text="Item Code">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="771.0" layoutY="426.0" prefHeight="22.0" prefWidth="54.0" text="Quantity">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtItemQuantity" layoutX="832.0" layoutY="424.0" onAction="#txtItemPriceOnAction" prefHeight="26.0" prefWidth="62.0" />
+      <TableView fx:id="tblPayment" layoutX="48.0" layoutY="467.0" prefHeight="98.0" prefWidth="763.0">
+        <columns>
+          <TableColumn fx:id="colNo" prefWidth="75.0" text="No" />
+          <TableColumn fx:id="colDescription" prefWidth="236.7999725341797" text="Description" />
+            <TableColumn fx:id="colQuantity" prefWidth="165.5999755859375" text="Quantity" />
+            <TableColumn fx:id="colPrice" prefWidth="144.0" text="Unit Price" />
+            <TableColumn fx:id="colTotal" prefWidth="140.0001220703125" text="Total" />
+        </columns>
+      </TableView>
+      <Label layoutX="27.0" layoutY="574.0" prefHeight="34.0" prefWidth="89.0" text="Total :">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblNetTotal" layoutX="103.0" layoutY="574.0" prefHeight="34.0" prefWidth="89.0" text="Rs.0.00">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="233.0" layoutY="58.0" prefHeight="22.0" prefWidth="38.0" text="Pet ID">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Separator layoutX="21.0" layoutY="124.0" prefHeight="0.0" prefWidth="890.0" />
+      <Button fx:id="btnPetAdd" layoutX="518.0" layoutY="54.0" mnemonicParsing="false" onAction="#btnPetAddOnAction" prefHeight="26.0" prefWidth="62.0" style="-fx-background-color: #303132;" text="ADD" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnPriceAdd" layoutX="824.0" layoutY="467.0" mnemonicParsing="false" onAction="#btnPriceAddOnAction" prefHeight="22.0" prefWidth="62.0" style="-fx-background-color: #303132;" text="ADD" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnClear" layoutX="825.0" layoutY="519.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="37.0" prefWidth="62.0" style="-fx-background-color: #303132;" text="CLEAR" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnPrint" layoutX="659.0" layoutY="578.0" mnemonicParsing="false" onAction="#btnPrintOnAction" prefHeight="43.0" prefWidth="126.0" style="-fx-background-color: #303132;" text="Payment" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+      <Label layoutX="596.0" layoutY="428.0" prefHeight="22.0" prefWidth="47.0" text="Price :">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtPetId" layoutX="293.0" layoutY="56.0" prefHeight="26.0" prefWidth="213.0" />
+      <Label layoutX="621.0" layoutY="50.0" prefHeight="27.0" prefWidth="126.0" text="Owner Name :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="621.0" layoutY="92.0" prefHeight="27.0" prefWidth="126.0" text="Pet Name      :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblOwnerId" layoutX="752.0" layoutY="50.0" prefHeight="27.0" prefWidth="106.0" text="Pet ID   ">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblPetName" layoutX="755.0" layoutY="92.0" prefHeight="22.0" prefWidth="95.0" text="Pet Name">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbItemCode" layoutX="130.0" layoutY="425.0" onAction="#cmbItemCodeOnAction" prefHeight="26.0" prefWidth="182.0" />
+      <ComboBox fx:id="cmbServiceId" layoutX="130.0" layoutY="133.0" onAction="#cmbServiceIdOnAction" prefHeight="26.0" prefWidth="182.0" />
+      <ComboBox fx:id="cmbMedicineId" layoutX="130.0" layoutY="271.0" onAction="#cmbMedicineIdOnAction" prefHeight="26.0" prefWidth="182.0" />
+      <Label layoutX="338.0" layoutY="428.0" prefHeight="22.0" prefWidth="82.0" text="Description :">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblIemDescription" layoutX="417.0" layoutY="428.0" prefHeight="22.0" prefWidth="167.0" text="_______________________________">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblItemPrice" layoutX="643.0" layoutY="428.0" prefHeight="22.0" prefWidth="115.0" text="______________________">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="598.0" layoutY="272.0" prefHeight="22.0" prefWidth="47.0" text="Price :">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="340.0" layoutY="272.0" prefHeight="22.0" prefWidth="82.0" text="Description :">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblMedicineDescription" layoutX="419.0" layoutY="272.0" prefHeight="22.0" prefWidth="167.0" text="______________________________">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblMedicinePrice" layoutX="645.0" layoutY="272.0" prefHeight="22.0" prefWidth="115.0" text="_____________________">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="597.0" layoutY="134.0" prefHeight="22.0" prefWidth="47.0" text="Price :">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="339.0" layoutY="134.0" prefHeight="22.0" prefWidth="82.0" text="Description :">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblServiceDescription" layoutX="418.0" layoutY="134.0" prefHeight="22.0" prefWidth="167.0" text="_____________________________">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblServicePrice" layoutX="644.0" layoutY="134.0" prefHeight="22.0" prefWidth="115.0" text="_____________________">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblOrderDate" layoutX="749.0" layoutY="15.0" prefHeight="26.0" prefWidth="142.0" textFill="#278d7f">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="618.0" layoutY="15.0" prefHeight="27.0" prefWidth="126.0" text="Date               :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblMedicinePayment" layoutX="46.0" layoutY="311.0" prefHeight="98.0" prefWidth="763.0">
+         <columns>
+            <TableColumn fx:id="colMedicineID" prefWidth="75.0" text="No" />
+            <TableColumn fx:id="colMedicineDescription" prefWidth="236.7999725341797" text="Description" />
+            <TableColumn fx:id="colMedicineQuantity" prefWidth="165.5999755859375" text="Quantity" />
+            <TableColumn fx:id="colMedicinePrice" prefWidth="144.0" text="Unit Price" />
+            <TableColumn fx:id="colMedicineTotal" prefWidth="140.0001220703125" text="Total" />
+         </columns>
+      </TableView>
+      <TableView fx:id="tblServicePayment" layoutX="40.0" layoutY="171.0" prefHeight="86.0" prefWidth="763.0">
+         <columns>
+            <TableColumn fx:id="colServiceNo" prefWidth="108.00000381469727" text="No" />
+            <TableColumn fx:id="colServiceDescription" prefWidth="315.99998474121094" text="Description" />
+            <TableColumn fx:id="colServicePrice" prefWidth="166.39996337890625" text="Unit Price" />
+            <TableColumn fx:id="colServiceTotal" prefWidth="172.0" text="Total" />
+         </columns>
+      </TableView>
+      <Button fx:id="btnMedicinePriceAdd" layoutX="822.0" layoutY="315.0" mnemonicParsing="false" onAction="#btnMedicinePriceAddOnAction" prefHeight="22.0" prefWidth="62.0" style="-fx-background-color: #303132;" text="ADD" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnMedicineClear" layoutX="823.0" layoutY="367.0" mnemonicParsing="false" onAction="#btnMedicineClearOnAction" prefHeight="37.0" prefWidth="62.0" style="-fx-background-color: #303132;" text="CLEAR" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnServicePriceAdd" layoutX="821.0" layoutY="173.0" mnemonicParsing="false" onAction="#btnServicePriceAddOnAction" prefHeight="22.0" prefWidth="62.0" style="-fx-background-color: #303132;" text="ADD" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnServiceClear" layoutX="822.0" layoutY="219.0" mnemonicParsing="false" onAction="#btnServiceClearOnAction" prefHeight="37.0" prefWidth="62.0" style="-fx-background-color: #303132;" text="CLEAR" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="lblPaymentId" layoutX="142.0" layoutY="15.0" prefHeight="26.0" prefWidth="142.0" textFill="#278d7f">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="11.0" layoutY="15.0" prefHeight="27.0" prefWidth="115.0" text="Payment No:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

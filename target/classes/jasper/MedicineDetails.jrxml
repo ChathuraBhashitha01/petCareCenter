@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.1.final using JasperReports Library version 6.20.1-7584acb244139816654f64e2fd57a00d3e31921e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="MedicineDetails" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0ce4f18b-b4dc-4e42-9e16-f38a158a67ff">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter (4)"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT date,petID,paymentID,medicineID FROM medicinedetail ORDER BY paymentID desc;]]>
+	</queryString>
+	<field name="date" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="date"/>
+		<property name="com.jaspersoft.studio.field.label" value="date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="medicinedetail"/>
+	</field>
+	<field name="petID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="petID"/>
+		<property name="com.jaspersoft.studio.field.label" value="petID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="medicinedetail"/>
+	</field>
+	<field name="paymentID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="paymentID"/>
+		<property name="com.jaspersoft.studio.field.label" value="paymentID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="medicinedetail"/>
+	</field>
+	<field name="medicineID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="medicineID"/>
+		<property name="com.jaspersoft.studio.field.label" value="medicineID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="medicinedetail"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="68" splitType="Stretch">
+			<staticText>
+				<reportElement x="80" y="10" width="400" height="40" uuid="66936d1b-fc52-4674-8a79-88d03f4db1dc"/>
+				<textElement textAlignment="Justified" markup="none">
+					<font size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Pet Care Center Pet Medicine Details]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="55" splitType="Stretch">
+			<staticText>
+				<reportElement x="30" y="20" width="100" height="30" uuid="0845c255-cc28-4fad-b9bf-5fc1f234b9f0"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="160" y="20" width="100" height="30" uuid="f1c0dc12-218d-4798-8dae-d4eab1a03e97"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Pet ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="20" width="100" height="30" uuid="728f4370-a8f1-443d-9966-54cb663e6f18"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Payment ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="420" y="20" width="100" height="30" uuid="94cfb0b6-1dfc-4fd1-8183-217f53318f35"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Medicine ID]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="43" splitType="Stretch">
+			<textField>
+				<reportElement x="30" y="10" width="100" height="30" uuid="a9bfddb2-5b17-40ec-af4e-f9346e983062">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a1d189f9-ee45-4df6-87b6-07ba4dfd9763"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="160" y="10" width="100" height="30" uuid="222a0114-5b51-4e7e-8ede-397f9bb14766">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c1ac0d6a-20d9-4db2-89d4-df6639b723a5"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{petID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="290" y="10" width="100" height="30" uuid="4e56b219-876a-4c2c-a6b1-ccaf35cdf964">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e9cab09b-3b32-4c95-b93b-51aab5aff5af"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{paymentID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="420" y="10" width="100" height="30" uuid="65b0e12b-901a-4f48-ab59-dd851e122019">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0d483572-6859-404d-87bb-5543b2d69d5e"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{medicineID}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #F0E4E4;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.petcarecenter.controller.MedicineManagementFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d9d3d3" height="255.0" layoutX="539.0" opacity="0.21" stroke="BLACK" strokeType="INSIDE" width="371.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d9d3d3" height="255.0" layoutX="263.0" layoutY="181.0" opacity="0.2" stroke="BLACK" strokeType="INSIDE" width="371.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d9d3d3" height="255.0" layoutX="-2.0" layoutY="355.0" opacity="0.2" stroke="BLACK" strokeType="INSIDE" width="371.0" />
+      <Label layoutX="140.0" layoutY="65.0" prefHeight="33.0" prefWidth="61.0" text="Pet">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="140.0" layoutY="101.0" text="Care Center">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnBack" layoutX="783.0" layoutY="555.0" mnemonicParsing="false" onAction="#btnBackOnAction" prefHeight="38.0" prefWidth="115.0" style="-fx-background-color: #303132; -fx-background-radius: 50;" text="Back" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="102.0" fitWidth="121.0" layoutX="17.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../Users/MSI/Pictures/Screenshots/Screenshot%20(12)_LI.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="68.0" fitWidth="76.0" layoutX="807.0" layoutY="491.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../Users/MSI/Downloads/pet-icon-8.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtMedicineId" layoutX="155.0" layoutY="155.0" onAction="#txtMedicineIdOnAction" prefHeight="26.0" prefWidth="450.0" />
+      <Label layoutX="47.0" layoutY="156.0" prefHeight="22.0" prefWidth="82.0" text="Medicine ID">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtMedicineName" layoutX="155.0" layoutY="199.0" onAction="#txtMedicineNameOnAction" prefHeight="26.0" prefWidth="450.0" />
+      <Label layoutX="47.0" layoutY="201.0" prefHeight="22.0" prefWidth="105.0" text="Medicine Name">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtQuantity" layoutX="154.0" layoutY="244.0" onAction="#txtQuantityOnAction" prefHeight="26.0" prefWidth="450.0" />
+      <Label layoutX="47.0" layoutY="245.0" prefHeight="22.0" prefWidth="82.0" text="Quantity">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblMedicine" layoutX="65.0" layoutY="355.0" prefHeight="202.0" prefWidth="673.0">
+        <columns>
+          <TableColumn fx:id="colMedicineId" prefWidth="139.20001220703125" text="Medicine ID" />
+          <TableColumn fx:id="colMedicineName" prefWidth="244.7999725341797" text="Medicine Name" />
+            <TableColumn fx:id="colQuantity" prefWidth="128.79998779296875" text="Quantity" />
+            <TableColumn fx:id="colPrice" prefWidth="160.800048828125" text="Price" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnSave" layoutX="634.0" layoutY="177.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="38.0" prefWidth="82.0" style="-fx-background-color: #303132;" text="Save" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnUpdate" layoutX="634.0" layoutY="225.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="38.0" prefWidth="82.0" style="-fx-background-color: #303132;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnDelect" layoutX="634.0" layoutY="273.0" mnemonicParsing="false" onAction="#btnDelectOnAction" prefHeight="38.0" prefWidth="82.0" style="-fx-background-color: #303132;" text="Delect" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <TextField fx:id="txtPrice" layoutX="154.0" layoutY="289.0" onAction="#txtQuantityOnAction" prefHeight="26.0" prefWidth="450.0" />
+      <Label layoutX="47.0" layoutY="290.0" prefHeight="22.0" prefWidth="82.0" text="Price">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
